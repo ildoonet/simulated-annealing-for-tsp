@@ -99,7 +99,7 @@ if __name__ == '__main__':
 
 
     print('| Set Name | Known Optimal | Best Solution | Gap | Running Time(sec) |')
-    print('|--------------------------------------------------------------------|')
+    print('|----------|---------------|---------------|-----|-------------------|')
     for name in __benchmark_set:
         start_time = time.time()
         solution, optimal = do_tsplib('./tsplib/{}.tsp'.format(name), './tsplib/{}.opt.tour'.format(name), t_v_factor, num_runover)

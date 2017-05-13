@@ -26,6 +26,9 @@ This project can be used under
 + (optional) python2.7> or 3 with numpy
 
 ```
+(optional)
+$ swig -python -c++ tsp_sa.i
+(cmake build...)
 $ mkdir build
 $ cd build
 $ cmake ..
@@ -35,6 +38,41 @@ $ make
 ## Usage
 
 ### Python
+
+```
+import numpy
+import pytspsa
+
+
+solver = pytspsa.Tsp_sa()
+c = [
+    [0, 0],
+    [0, 1],
+    [0, 2],
+    [0, 3]
+]
+c = numpy.asarray(c, dtype=numpy.float32)
+solver.set_num_nodes(4)
+solver.add_by_coordinates(c)
+solver.set_t_v_factor(4.0)
+
+# solver.sa() or sa_auto_parameter() will solve the problem.
+solver.sa_auto_parameter(12)
+
+# getting result
+solution = solver.getBestSolution()
+
+print('Length={}'.format(solution.getlength()))
+print('Path= {}'.format(solution.getRoute()))
+```
+
+This will generate the result as 
+
+```
+Length=6.0
+Path= 0-1-2-3-0
+```
+
 
 ### CLI
 
@@ -96,3 +134,5 @@ Please see
 | ulysses16 | 74.11 | 73.99 | -0.163% | 0.43 |
 | ulysses22 | 75.67 | 75.31 | -0.470% | 0.91 |
 | a280 | 2586.77 | 2750.55 | 6.331% | 230.55 |
+
+* You can compare this result with other commercial packages like [Concorde](http://www.math.uwaterloo.ca/tsp/concorde/benchmarks/bench99.html).

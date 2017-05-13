@@ -117,49 +117,49 @@ class Solution(_object):
         except __builtin__.Exception:
             self.this = this
 
-    def _init(self, n, dists_f):
+    def _init(self, n: 'int const', dists_f: 'float const **') -> "void":
         return _pytspsa.Solution__init(self, n, dists_f)
 
-    def getlength(self):
+    def getlength(self) -> "float":
         return _pytspsa.Solution_getlength(self)
 
-    def setlength(self):
+    def setlength(self) -> "void":
         return _pytspsa.Solution_setlength(self)
 
-    def getRoute(self):
+    def getRoute(self) -> "std::string":
         return _pytspsa.Solution_getRoute(self)
 
-    def setInit(self):
+    def setInit(self) -> "void":
         return _pytspsa.Solution_setInit(self)
 
-    def getNewSolution_br(self):
+    def getNewSolution_br(self) -> "int":
         return _pytspsa.Solution_getNewSolution_br(self)
 
-    def setNewSolution_br(self):
+    def setNewSolution_br(self) -> "void":
         return _pytspsa.Solution_setNewSolution_br(self)
 
-    def getNewSolution_vi(self):
+    def getNewSolution_vi(self) -> "int":
         return _pytspsa.Solution_getNewSolution_vi(self)
 
-    def setNewSolution_vi(self):
+    def setNewSolution_vi(self) -> "void":
         return _pytspsa.Solution_setNewSolution_vi(self)
 
-    def setNext(self):
+    def setNext(self) -> "void":
         return _pytspsa.Solution_setNext(self)
 
-    def reverse(self, idx):
+    def reverse(self, idx: 'int const') -> "void":
         return _pytspsa.Solution_reverse(self, idx)
 
-    def localSearch(self):
+    def localSearch(self) -> "void":
         return _pytspsa.Solution_localSearch(self)
 
-    def copy(self, Other):
+    def copy(self, Other: 'Solution') -> "void":
         return _pytspsa.Solution_copy(self, Other)
 
-    def setSolution(self, solution):
+    def setSolution(self, solution: 'int *') -> "void":
         return _pytspsa.Solution_setSolution(self, solution)
 
-    def verify(self):
+    def verify(self) -> "bool":
         return _pytspsa.Solution_verify(self)
     __swig_destroy__ = _pytspsa.delete_Solution
     __del__ = lambda self: None
@@ -179,61 +179,61 @@ class Tsp_sa(_object):
     __swig_destroy__ = _pytspsa.delete_Tsp_sa
     __del__ = lambda self: None
 
-    def set_num_nodes(self, size):
+    def set_num_nodes(self, size: 'int') -> "void":
         return _pytspsa.Tsp_sa_set_num_nodes(self, size)
 
-    def add_by_coordinates(self, *args):
+    def add_by_coordinates(self, *args) -> "void":
         return _pytspsa.Tsp_sa_add_by_coordinates(self, *args)
 
-    def add_by_distances(self, *args):
+    def add_by_distances(self, *args) -> "void":
         return _pytspsa.Tsp_sa_add_by_distances(self, *args)
 
-    def init_random(self):
+    def init_random(self) -> "void":
         return _pytspsa.Tsp_sa_init_random(self)
 
-    def get_alpha(self):
+    def get_alpha(self) -> "float":
         return _pytspsa.Tsp_sa_get_alpha(self)
 
-    def set_alpha(self, alpha):
+    def set_alpha(self, alpha: 'float') -> "void":
         return _pytspsa.Tsp_sa_set_alpha(self, alpha)
 
-    def get_beta(self):
+    def get_beta(self) -> "float":
         return _pytspsa.Tsp_sa_get_beta(self)
 
-    def set_beta(self, beta):
+    def set_beta(self, beta: 'float') -> "void":
         return _pytspsa.Tsp_sa_set_beta(self, beta)
 
-    def set_current_temperature(self, t):
+    def set_current_temperature(self, t: 'double') -> "void":
         return _pytspsa.Tsp_sa_set_current_temperature(self, t)
 
-    def set_cooling_rate(self, t):
+    def set_cooling_rate(self, t: 'double') -> "void":
         return _pytspsa.Tsp_sa_set_cooling_rate(self, t)
 
-    def set_end_temperatue(self, t):
+    def set_end_temperatue(self, t: 'double') -> "void":
         return _pytspsa.Tsp_sa_set_end_temperatue(self, t)
 
-    def set_temperature_greedy(self, t):
+    def set_temperature_greedy(self, t: 'double') -> "void":
         return _pytspsa.Tsp_sa_set_temperature_greedy(self, t)
 
-    def set_t_v_factor(self, t):
+    def set_t_v_factor(self, t: 'double') -> "void":
         return _pytspsa.Tsp_sa_set_t_v_factor(self, t)
 
-    def get_distance_matrice(self):
+    def get_distance_matrice(self) -> "float **":
         return _pytspsa.Tsp_sa_get_distance_matrice(self)
 
-    def sa(self, *args):
+    def sa(self, *args) -> "void":
         return _pytspsa.Tsp_sa_sa(self, *args)
 
-    def sa_auto_parameter(self, num_runover):
+    def sa_auto_parameter(self, num_runover: 'int const') -> "void":
         return _pytspsa.Tsp_sa_sa_auto_parameter(self, num_runover)
 
-    def getvalue(self):
+    def getvalue(self) -> "float":
         return _pytspsa.Tsp_sa_getvalue(self)
 
-    def getBestSolution(self):
+    def getBestSolution(self) -> "Solution &":
         return _pytspsa.Tsp_sa_getBestSolution(self)
 
-    def setBestSolution_init(self):
+    def setBestSolution_init(self) -> "void":
         return _pytspsa.Tsp_sa_setBestSolution_init(self)
 
     def __init__(self):
@@ -250,7 +250,7 @@ info = _pytspsa.info
 warning = _pytspsa.warning
 error = _pytspsa.error
 
-def setLogLevel(l):
+def setLogLevel(l: 'LogLevel') -> "void":
     return _pytspsa.setLogLevel(l)
 setLogLevel = _pytspsa.setLogLevel
 # This file is compatible with both classic and new-style classes.

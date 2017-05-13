@@ -25,6 +25,6 @@ print('Path= {}'.format(solution.getRoute()))
 
 # Result should be ..
 """
-$ Length=6.0
-$ Path= 0-1-2-3-0
+Length=6.0
+Path= 0-1-2-3-0
 """

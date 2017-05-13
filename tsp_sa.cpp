@@ -281,7 +281,7 @@ void Tsp_sa::sa_auto_parameter(const int num_runover) {
     getBestSolution().copy(best_solution);
 }
 
-DATATYPE Tsp_sa::getvalue() {
+float Tsp_sa::getvalue() {
     return optimal_value;
 }
 

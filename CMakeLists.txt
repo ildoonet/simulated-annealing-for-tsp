@@ -7,7 +7,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/modules/")
 
 FIND_PACKAGE(PythonLibs)
 
-if (PythonLibs)
+if (PYTHONLIBS_FOUND)
     FIND_PACKAGE(SWIG REQUIRED)
     INCLUDE(${SWIG_USE_FILE})
 
@@ -29,10 +29,10 @@ add_executable(tspsa_exe ${EXECUTABLE_FILES})
 target_link_libraries(tspsa_exe tspsa)
 
 # build python library
-if (PythonLibs)
+if (PYTHONLIBS_FOUND)
     SET(CMAKE_SWIG_FLAGS "")
-    SET_SOURCE_FILES_PROPERTIES(SOURCE tsp_sa.i PROPERTY CPLUSPLUS ON)
-    SET_SOURCE_FILES_PROPERTIES(SOURCE tsp_sa.i PROPERTY SWIG_FLAGS "-includeall")
-    SWIG_ADD_MODULE(pytspsa python tsp_sa.i tsp_sa_wrap.cxx)
+#    SET_SOURCE_FILES_PROPERTIES(SOURCE tsp_sa.i PROPERTY CPLUSPLUS ON)
+#    SET_SOURCE_FILES_PROPERTIES(SOURCE tsp_sa.i PROPERTY SWIG_FLAGS "-includeall")
+    SWIG_ADD_MODULE(pytspsa python tsp_sa_wrap.cxx)
     SWIG_LINK_LIBRARIES(pytspsa tspsa ${PYTHON_LIBRARIES})
 endif()

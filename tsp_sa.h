@@ -2,7 +2,6 @@
 #define tsp_sa_tsp_sa_h
 
 #include <cstring>
-#define DATATYPE float
 
 using namespace std;
 
@@ -38,9 +37,11 @@ public:
 
     void _init(const int n, const float** dists_f);
 
-    DATATYPE getlength();
+    float getlength();
     void setlength();
-    
+
+    string getRoute();
+
     /* New Solution Generating Functions */
     void setInit();
     
@@ -82,8 +83,8 @@ private:
     Solution *current_solution;
     Solution *temp_solution;
     Solution *best_solution;
-    
-    DATATYPE optimal_value;
+
+    float optimal_value;
     
 public:
     ~Tsp_sa();
@@ -112,7 +113,7 @@ public:
     void sa(const int maxtime_sec);
     void sa_auto_parameter(const int num_runover);
 
-    DATATYPE getvalue();
+    float getvalue();
     Solution& getBestSolution();
     void setBestSolution_init();
 };

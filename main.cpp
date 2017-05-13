@@ -135,6 +135,8 @@ int main (int argc, char* argv[]) {
 
     tsplog(info) << "Best Solution Value : " << best_solution.getlength() << TspLogger::endl;
     tsplog(info) << "time elapsed : " << timer.getseconds() << " seconds" << TspLogger::endl;
+    tsplog(info) << "Found Path: " << TspLogger::endl;
+    tsplog(info) << best_solution.getRoute() << TspLogger::endl;
 
     fin.close();
 

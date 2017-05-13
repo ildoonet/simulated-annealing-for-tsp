@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <sstream>
 #include "tsp_sa.h"
 
 Solution::Solution(int n, float ** dists_f)
@@ -73,7 +74,7 @@ void Solution::setInit()
     delete [] init;
 }
 
-DATATYPE Solution::getlength()
+float Solution::getlength()
 {
     return length;
 }
@@ -400,8 +401,7 @@ void Solution::localSearch() {
         
         if(best_improve<=0.1)
             return;
-        else
-        {
+        else {
             //cout << "!!!" << best_improve << endl;
             setNext();
             //cout << getlength() << endl;
@@ -409,4 +409,21 @@ void Solution::localSearch() {
     }
     
     
+}
+
+string Solution::getRoute() {
+    stringstream route;
+    route << "0";
+    int curr_p = 0;
+    for (int i = 0; i < this->num_nodes; i++) {
+        for (int j = 0; j < this->num_nodes; j++) {
+            if (this->solution[curr_p][j]) {
+                route << "-" << j;
+                curr_p = j;
+                break;
+            }
+        }
+    }
+
+    return string(route.str());
 }

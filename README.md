@@ -39,7 +39,7 @@ $ make
 
 ### Python
 
-```
+```python
 import numpy
 import pytspsa
 

@@ -138,4 +138,4 @@ Please see
 * You can compare this result with other commercial packages like [Concorde](http://www.math.uwaterloo.ca/tsp/concorde/benchmarks/bench99.html).
 
 
-## License : GPL License
+## License : [GPL License](LICENSE.md)

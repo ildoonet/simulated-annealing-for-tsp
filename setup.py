@@ -60,7 +60,10 @@ if __name__ == '__main__':
           py_modules=['pytspsa'],
           ext_modules=[pytspsa],
           description="""
-          This code is to solve traveling salesman problem by using simulated annealing meta heuristic. 
+          This package is for solving traveling salesman problem by using simulated annealing meta heuristic. 
+
+$ pip install pytspsa
+$ python
 
 ``` 
 import numpy 

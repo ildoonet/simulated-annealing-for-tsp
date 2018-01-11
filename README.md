@@ -1,5 +1,7 @@
 # TSP-SA : Traveling Salesman Problem Solver using Simulated Annealing Algorithm
 
+![tsp.png](TSP Image from gurobi.com)
+
 Implementation of TSP Solver based on the paper [Solving the traveling salesman problem
  based on an adaptive simulated annealing algorithm with greedy search](http://www.sciencedirect.com/science/article/pii/S1568494611000573) using Simulated Annealing(SA) Algorithm..
 
